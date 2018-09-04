@@ -82,4 +82,15 @@ class CommentController extends Controller
     {
         //
     }
+	
+	/**
+     * Show the form for removing the specified resource.
+     *
+     * @param  \App\comment  $comment
+     * @return \Illuminate\Http\comment
+     */
+    public function remove(comment $comment)
+    {
+        //
+    }
 }

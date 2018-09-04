@@ -82,4 +82,15 @@ class PictureController extends Controller
     {
         //
     }
+	
+	/**
+     * Show the form for removing the specified resource.
+     *
+     * @param  \App\picture  $picture
+     * @return \Illuminate\Http\Response
+     */
+    public function remove(picture $picture)
+    {
+        //
+    }
 }
