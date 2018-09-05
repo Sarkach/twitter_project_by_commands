@@ -23,7 +23,7 @@ Route::resource('roles', 'RoleController');
 // объявляем маршрут самостоятельно.
 Route::get('roles/{role}/remove', 'RoleController@remove')
      ->name('roles.remove');
-	 
+
 /*-----------------------------------------------------------------*/
 
 // Объявляем маршруты для ресурсного контроллера ProductController,
@@ -34,7 +34,7 @@ Route::resource('publications', 'PublicationController');
 // объявляем маршрут самостоятельно.
 Route::get('publications/{publication}/remove', 'PublicationController@remove')
      ->name('publications.remove');
-	 
+
 	 /*-----------------------------------------------------------------*/
 // Объявляем маршруты для ресурсного контроллера ProductController,
 // назначая слово products префиксом URI
@@ -44,7 +44,7 @@ Route::resource('pictures', 'PictureController');
 // объявляем маршрут самостоятельно.
 Route::get('pictures/{picture}/remove', 'PictureController@remove')
      ->name('pictures.remove');
-	 
+
 	 /*-----------------------------------------------------------------*/
 // Объявляем маршруты для ресурсного контроллера ProductController,
 // назначая слово products префиксом URI
@@ -54,16 +54,17 @@ Route::resource('genders', 'GenderController');
 // объявляем маршрут самостоятельно.
 Route::get('genders/{gender}/remove', 'GenderController@remove')
      ->name('genders.remove');
-	 
+
 	 /*-----------------------------------------------------------------*/
 // Объявляем маршруты для ресурсного контроллера ProductController,
 // назначая слово products префиксом URI
-Route::resource('comments', 'RoleController');
+Route::resource('comments', 'CommentController');
 
 // Т. к. метод remove() не предусмотрен в ресурсных контроллерах,
 // объявляем маршрут самостоятельно.
 Route::get('comments/{comment}/remove', 'CommentController@remove')
      ->name('comments.remove');
+
 
 Auth::routes();
 

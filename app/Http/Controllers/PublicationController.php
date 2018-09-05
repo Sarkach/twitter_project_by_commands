@@ -28,11 +28,11 @@ class PublicationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {	
+    {
         // Форма добавления продукта в БД.
         // Создаём в ОЗУ новый экземпляр (объект) класса Product.
         $publication = new publication();
-		$users = user::orderBy('email', 'ASC')->pluck('email', 'id');// выгпузка юзеров через create
+		    $users = user::orderBy('email', 'ASC')->pluck('email', 'id');// выгпузка юзеров через create
         // Использовать шаблон resources/views/products/create.blade.php, в котором…
         return view('publications.create')->withPublication($publication)->withUsers($users);
 
@@ -143,7 +143,7 @@ class PublicationController extends Controller
         // (см. routes/web.php).
         return redirect(route('publications.index'));
     }
-	
+
 	/**
      * Show the form for removing the specified resource.
      *
