@@ -12,5 +12,20 @@
   "Updating access rights": "Редактирование прав доступа:",
   "Removing access rights": "Удаление прав доступа:",
   "Added access rights": "Добавление прав доступа:",
-  "content": "Контэнт:"
+  
+  "Update publication": "Обновить публикацию",
+  "Updated2": "Обновлена публикация «:content»",
+  "Removing publication:": "Удаление публикации:",
+  "Publication edit:": "Изменить публикацию:",
+  "Created2": "Создана публикация «:content»",
+  "Removed2": "Удалён «:content»",
+  "Remove publication": "Удалить публикацию",
+  "Edit publication": "Отредактировать публикацию", 
+  "Create publication": "Создать публикации",
+  "Create publications:": "Добавление публикаций:",
+  "Updating publications": "Изменение публикаций",
+  "content": "Контент:",
+  "Text:": "Текст:",
+  "Status:": "Статус:",
+  "Users name:": "Имя пользователя:"
 }

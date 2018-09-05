@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\publication;
+use App\Publication;
+use App\User;
 use Illuminate\Http\Request;
 
 class PublicationController extends Controller
@@ -27,13 +28,13 @@ class PublicationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {	
         // Форма добавления продукта в БД.
         // Создаём в ОЗУ новый экземпляр (объект) класса Product.
         $publication = new publication();
-
+		$users = user::orderBy('email', 'ASC')->pluck('email', 'id');// выгпузка юзеров через create
         // Использовать шаблон resources/views/products/create.blade.php, в котором…
-        return view('publications.create')->withpublication($publication);
+        return view('publications.create')->withPublication($publication)->withUsers($users);
 
     }
 
@@ -47,8 +48,12 @@ class PublicationController extends Controller
     {
         // Добавление продукта в БД
         // Принимаем из формы значения полей с name, равными title, price.
-        $attributes = $request->only(['access', 'access']);
+        $attributes = $request->only(['content', 'status', 'user_id']);
 
+		if (isset($attributes['status']))
+			$attributes['status']=true;
+		else
+			$attributes['status']=false;
         // Создаём кортеж в БД.
         $publication = publication::create($attributes);
 
@@ -57,7 +62,7 @@ class PublicationController extends Controller
         // (см. resources/lang/ru/messages.php).
         $request->session()->flash(
             'message',
-            __('Created', ['access' => $publication->access])
+            __('Created2', ['content' => $publication->content])
         );
 
         // Перенаправляем клиент HTTP на маршрут с именем products.index
@@ -86,7 +91,8 @@ class PublicationController extends Controller
     public function edit(publication $publication)
     {
         //
-		return view('publications.edit')->withpublication($publication);
+		$users = user::orderBy('email', 'ASC')->pluck('email', 'id');// выгпузка юзеров через create
+		return view('publications.edit')->withPublication($publication)->withUsers($users);
     }
 
     /**
@@ -101,15 +107,14 @@ class PublicationController extends Controller
         // Редактирование продукта в БД.
 
         // Принимаем из формы значения полей с name, равными title, price.
-        $attributes = $request->only(['access', 'price']);
-
+        $attributes = $request->only(['content', 'status', 'user_id']);
         // Обновляем кортеж в БД.
         $publication->update($attributes);
 
         // Создаём всплывающее сообщение об успешном обновлении БД
         $request->session()->flash(
             'message',
-            __('Updated', ['access' => $publication->access])
+            __('Updated2', ['content' => $publication->content])
         );
 
         // Перенаправляем клиент HTTP на маршрут с именем products.index
@@ -123,7 +128,7 @@ class PublicationController extends Controller
      * @param  \App\publication  $publication
      * @return \Illuminate\Http\Response
      */
-    public function destroy(publication $publication)
+    public function destroy(publication $publication, Request $request)
     {
         // Удаляем товар из БД.
         $publication->delete();
@@ -131,7 +136,7 @@ class PublicationController extends Controller
         // Создаём всплывающее сообщение об успешном удалении из БД
         $request->session()->flash(
 		'message',
-		__('Removed', ['access' => $publication->access])
+		__('Removed2', ['content' => $publication->content])
 		);
 
         // Перенаправляем клиент HTTP на маршрут с именем products.index

@@ -4,25 +4,25 @@
 @extends('base')
 
 {{-- В секции title родительского шаблона будет выведен перевод фразы: Edit publication --}}
-@section('title', __('Edit publication'))
+@section('title', __('Edit publication:'))
 
 {{-- В секции main родительского шаблона будет выведена форма --}}
 @section('main')
 
-<h1>{{ __('Updating access rights') }}</h1>
+<h1>{{ __('Publication edit:') }}</h1>
     {{-- Форма предъявляется методом HTTP PUT на веб­‑адрес: publication/ID, где ID - первичный ключ товара --}}
     {{
         Form::model($publication, [
             'method' => 'PUT',
             'route'  => [
-                'roles.update',
+                'publications.update',
                 $publication->id,
             ]
         ])
     }}
 
     {{-- Включаем шаблон resources/views/roles/partials/form.blade.php --}}
-    @include('roles.partials.form')
+    @include('publications.partials.form')
 
     {{-- Кнопка предъявления формы --}}
     {{

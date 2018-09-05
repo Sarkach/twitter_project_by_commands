@@ -99,7 +99,7 @@ class RoleController extends Controller
         // Редактирование продукта в БД.
 
         // Принимаем из формы значения полей с name, равными title, price.
-        $attributes = $request->only(['access', 'price']);
+        $attributes = $request->only(['access']);
 
         // Обновляем кортеж в БД.
         $role->update($attributes);

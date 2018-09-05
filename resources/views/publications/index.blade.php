@@ -19,7 +19,7 @@
 			}}
 
     </p>
-<center><h1>{{ __('Updating users') }}</h1></center>
+<center><h1>{{ __('Updating publications') }}</h1></center>
     <div class="table-responsive">
         <table class="table table-hover table-striped">
             <tr>
@@ -35,13 +35,13 @@
             </tr>
             @foreach ($publications as $publication)
                 <tr>
-                    <td>{{ $publication->access }}</td>
+                    <td>{{ $publication->content }}</td>
                     <td>{{ Html::secureLink(
-                        route('roles.edit', $publication->id),
+                        route('publications.edit', $publication->id),
                         __('Edit publication')
                     ) }}</td>
                     <td>{{ Html::secureLink(
-                        route('roles.remove', $publication->id),
+                        route('publications.remove', $publication->id),
                         __('Remove publication')
                     ) }}</td>
                 </tr>

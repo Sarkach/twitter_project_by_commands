@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('firstname');
 			$table->string('surname');
 			$table->string('patronymic');
 			$table->date('dob');
@@ -28,8 +28,8 @@ class CreateUsersTable extends Migration
                   ->on('genders')         
                   ->onDelete('CASCADE') 
 				  ->onUpdate('RESTRICT');
-				  $table->integer('role_id')  
-                  ->unsigned();   
+			$table->integer('role_id')
+				  ->unsigned();
 			$table->foreign('role_id')  
                   ->references('id')            
                   ->on('roles')         

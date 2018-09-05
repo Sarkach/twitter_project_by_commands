@@ -3,8 +3,22 @@
 <div class="form-group">
     {{-- Метка к полю ввода наименования товара --}}
     {{-- На метке будет выведен перевод слова Title --}}
-   <h1>{{ Form::label('access', __('Editing users')) }}</h1>
+   <h1>{{ Form::label('content', __('Text:')) }}</h1>
 
     {{-- Поле ввода наименования товара --}}
-    {{ Form::text('access', null, ['class' => 'form-control']) }}
+    {{ Form::text('content', null, ['class' => 'form-control']) }}
+	
+	{{-- Метка к полю ввода наименования товара --}}
+    {{-- На метке будет выведен перевод слова Title --}}
+   <h1>{{ Form::label('status', __('Status:')) }}</h1>
+
+    {{-- Поле ввода наименования товара --}}
+    {{ Form::checkbox('status', null, ['class' => 'form-control']) }}
+	
+	{{-- Метка к полю ввода наименования товара --}}
+    {{-- На метке будет выведен перевод слова Title --}}
+   <h1>{{ Form::label('content', __('Users name:')) }}</h1>
+
+    {{-- Поле ввода наименования товара --}}
+    {{ Form::select('user_id', $users, ['class' => 'form-control']) }}
 </div>
