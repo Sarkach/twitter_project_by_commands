@@ -12,7 +12,7 @@
   "Updating access rights": "Редактирование прав доступа:",
   "Removing access rights": "Удаление прав доступа:",
   "Added access rights": "Добавление прав доступа:",
-  
+
   "Update publication": "Обновить публикацию",
   "Updated2": "Обновлена публикация «:content»",
   "Removing publication:": "Удаление публикации:",
@@ -20,12 +20,32 @@
   "Created2": "Создана публикация «:content»",
   "Removed2": "Удалён «:content»",
   "Remove publication": "Удалить публикацию",
-  "Edit publication": "Отредактировать публикацию", 
+  "Edit publication": "Отредактировать публикацию",
   "Create publication": "Создать публикации",
   "Create publications:": "Добавление публикаций:",
   "Updating publications": "Изменение публикаций",
   "content": "Контент:",
   "Text:": "Текст:",
   "Status:": "Статус:",
-  "Users name:": "Имя пользователя:"
+  "Users name:": "Имя пользователя:",
+
+  "Update comment": "Обновить комментарий",
+  "Updated3": "Обновлен комментарий «:content»",
+  "Removing comments:": "Удаление комментариев:",
+  "Comments edit:": "Изменить комментарий:",
+  "Created3": "Создан комментарий «:content»",
+  "Removed3": "Удалён «:content»",
+  "Remove comment": "Удалить комментарий",
+  "Edit comment": "Отредактировать комментарий",
+  "Create comment": "Создать комментарий",
+  "Create comments:": "Добавление комментариев:",
+  "Updating comments": "Изменение комментариев",
+  "content": "Контент:",
+  "Text:": "Текст:",
+  "Content:": "Контент:",
+  "Users name:": "Имя пользователя:",
+  "Save comment": "Сохранить комментарий",
+  "Name comment:": "Комментарий:"
+
+
 }

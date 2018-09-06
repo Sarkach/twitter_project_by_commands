@@ -4,7 +4,7 @@
 @extends('base')
 
 {{-- В секции title родительского шаблона будет выведен перевод фразы: Edit publication --}}
-@section('title', __('Edit comment:'))
+@section('title', __('Edit comment'))
 
 {{-- В секции main родительского шаблона будет выведена форма --}}
 @section('main')
@@ -12,7 +12,7 @@
 <h1>{{ __('Comments edit:') }}</h1>
     {{-- Форма предъявляется методом HTTP PUT на веб­‑адрес: publication/ID, где ID - первичный ключ товара --}}
     {{
-        Form::model(comment, [
+        Form::model($comment, [
             'method' => 'PUT',
             'route'  => [
                 'comments.update',

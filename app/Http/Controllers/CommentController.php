@@ -59,7 +59,7 @@ class CommentController extends Controller
       // (см. resources/lang/ru/messages.php).
       $request->session()->flash(
           'message',
-          __('Created2', ['content' => $comment->content])
+          __('Created3', ['content' => $comment->content])
       );
 
       // Перенаправляем клиент HTTP на маршрут с именем products.index
@@ -88,7 +88,8 @@ class CommentController extends Controller
     {
       //
       $users = user::orderBy('email', 'ASC')->pluck('email', 'id');// выгпузка юзеров через create
-      return view('comments.edit')->withcomment($comment)->withUsers($users);
+      $publications = publication::orderBy('content', 'ASC')->pluck('content', 'id');// выгпузка юзеров через create
+      return view('comments.edit')->withcomment($comment)->withUsers($users)->withPublications($publications);
     }
 
     /**
@@ -110,7 +111,7 @@ class CommentController extends Controller
       // Создаём всплывающее сообщение об успешном обновлении БД
       $request->session()->flash(
           'message',
-          __('Updated2', ['content' => $comment->content])
+          __('Updated3', ['content' => $comment->content])
       );
 
       // Перенаправляем клиент HTTP на маршрут с именем products.index
@@ -124,15 +125,15 @@ class CommentController extends Controller
      * @param  \App\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(comment $comment)
+    public function destroy(comment $comment, Request $request)
     {
       // Удаляем товар из БД.
       $comment->delete();
 
       // Создаём всплывающее сообщение об успешном удалении из БД
       $request->session()->flash(
-  'message',
-  __('Removed2', ['content' => $comment->content])
+     'message',
+     __('Removed3', ['content' => $comment->content])
   );
 
       // Перенаправляем клиент HTTP на маршрут с именем products.index

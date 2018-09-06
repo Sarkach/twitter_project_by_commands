@@ -14,7 +14,11 @@ class PictureController extends Controller
      */
     public function index()
     {
-        //
+      // Извлекаем из БД коллекцию товаров,
+      // отсортированных по возрастанию значений атрибута title
+      //$pictures = picture::orderBy('content', 'ASC')->get();
+      // Использовать шаблон resources/views/products/index.blade.php, где…
+      //return view('picture.index')->withcomments($pictures);
     }
 
     /**
@@ -24,7 +28,13 @@ class PictureController extends Controller
      */
     public function create()
     {
-        //
+      // Форма добавления продукта в БД.
+      // Создаём в ОЗУ новый экземпляр (объект) класса Product.
+      //$picture = new picture();
+      //$users = user::orderBy('email', 'ASC')->pluck('email', 'id');// выгпузка юзеров через create
+      //$publications = publication::orderBy('content', 'ASC')->pluck('content', 'id');// выгпузка юзеров через create
+      // Использовать шаблон resources/views/products/create.blade.php, в котором…
+      return view('comments.create')->withcomment($comment)->withUsers($users)->withPublications($publications);
     }
 
     /**
@@ -35,7 +45,8 @@ class PictureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $path=$request->file('path')->store('');
+	 $image=Image::create(['path'=>$path]);
     }
 
     /**
