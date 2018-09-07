@@ -9,7 +9,7 @@
 {{-- В секции main родительского шаблона будет выведена форма --}}
 @section('main')
 
-<h1>{{ __('Added access rights') }}</h1>
+<h1>{{ __('Added access rights:') }}</h1>
     {{-- Форма предъявляется методом HTTP POST на маршрут role.create --}}
     {{
         Form::model($role, [

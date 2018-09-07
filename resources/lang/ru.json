@@ -1,33 +1,35 @@
 {
-  "Created": "Создан доступ «:access»",
-  "Updated": "Обновлен доступ «:access»",
-  "Removed": "Удалён доступ «:access»",
-  "Create role": "Создать запись о правах доступа",
+  "Updating access rights:": "Редактирование прав доступа:",  
   "Edit role": "Отредактировать запись о правах доступа",
+  "Removing access rights:": "Удаление прав доступа:",
+  "Update role": "Обновить запись о правах доступа",
   "Remove role": "Удалить запись о правах доступа",
   "Save role": "Сохранить запись о правах доступа",
-  "Update role": "Обновить запись о правах доступа",
+  "Create role": "Создать запись о правах доступа",
+  "Added access rights:": "Добавление прав доступа:",
   "Updating users": "Изменение прав доступа",
-  "Name": "Наименование:",
-  "Updating access rights": "Редактирование прав доступа:",
-  "Removing access rights": "Удаление прав доступа:",
-  "Added access rights": "Добавление прав доступа:",
+  "Updated": "Обновлен доступ «:access»",
+  "Created": "Создан доступ «:access»",  
+  "Removed": "Удалён доступ «:access»",
+  "Name": "Наименование",
 
+  
   "Update publication": "Обновить публикацию",
   "Updated2": "Обновлена публикация «:content»",
   "Removing publication:": "Удаление публикации:",
   "Publication edit:": "Изменить публикацию:",
-  "Created2": "Создана публикация «:content»",
-  "Removed2": "Удалён «:content»",
+  "Created2": "Создана публикация «:content»",  
   "Remove publication": "Удалить публикацию",
   "Edit publication": "Отредактировать публикацию",
   "Create publication": "Создать публикации",
   "Create publications:": "Добавление публикаций:",
   "Updating publications": "Изменение публикаций",
+  "Removed2": "Удалён «:content»",
+  "Users name:": "Имя пользователя:",
   "content": "Контент:",
   "Text:": "Текст:",
   "Status:": "Статус:",
-  "Users name:": "Имя пользователя:",
+  
 
   "Update comment": "Обновить комментарий",
   "Updated3": "Обновлен комментарий «:content»",
@@ -45,7 +47,17 @@
   "Content:": "Контент:",
   "Users name:": "Имя пользователя:",
   "Save comment": "Сохранить комментарий",
-  "Name comment:": "Комментарий:"
+  "Name comment:": "Комментарий:",
 
-
+  
+  "Create picture": "Загрузить изображение",
+  "Picture": "Изображение:",
+  "Valid formats: GIF, JPEG, PNG, SVG.": "Доступные форматы: GIF, JPEG, PNG, SVG.",
+  "Creating picture:": "Загрузка изображения:",
+  "Save picture": "Сохранить изображение",
+  "Remove picture": "Удалить изображение",
+  "Removing picture:": "Удаление изображения:",
+  "Pictures": "Изображения ",
+  "Removed4": "Удалено изображение «:path»",
+  "Created4": "Добавлено изображение «:path»"
 }

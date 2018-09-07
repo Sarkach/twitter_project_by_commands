@@ -9,7 +9,7 @@
 {{-- В секции main родительского шаблона будет выведена форма --}}
 @section('main')
 
-<h1>{{ __('Removing access rights') }}</h1>
+<h1>{{ __('Removing access rights:') }}</h1>
     {{-- Форма предъявляется методом HTTP DELETE на веб­‑адрес: role/ID, где ID ⁠— первичный ключ товара --}}
     {{
         Form::model($role, [

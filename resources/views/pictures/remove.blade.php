@@ -5,9 +5,9 @@
 
 {{-- В секции name родительского шаблона будет выведен перевод фразы: Remove image --}}
 @section('name', __('Remove picture'))
-<center>
-  <h1>{{ __('Removing picture')}}</h1>
-</center>
+
+  <h1>{{ __('Removing picture:')}}</h1>
+
 
 {{-- В секции main родительского шаблона будет выведена форма --}}
 @section('main')
@@ -26,7 +26,7 @@
     {{-- Выводим наименование картинки --}}
     <div class = "container-fluid">
       <figure class = "col-xs-12 col-sm-6 col-md-3 col-lg-1">
-        <img alt = "{{ $picture->id }}" src = "{{ asset('storage/pictures/'.$picture->path) }}" class = "img-responsive img-thumbnail">
+        <img alt = "{{ $picture->id }}" src = "{{ asset('storage/'.$picture->path) }}" class = "img-responsive img-thumbnail">
       </figure>
     </div>
 

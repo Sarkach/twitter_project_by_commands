@@ -51,12 +51,12 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'firstname' => 'required|string|max:255',
+			'surname' => 'required|string|max:255',
+			'patronymic' => 'required|string|max:255',
+			'dob' => 'required|date',
+			'gender_id' => 'required|integer',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'surname' => 'required|string|max:255',
-            'patronymic' => 'required|string|max:255',
-            'dob' => 'required|date',
-            'gender_id' => 'required|integer',
         ]);
     }
 
@@ -69,7 +69,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
      var_dump ($data);
-		$genders = Gender::orderBy('id', 'ASC')->get();
+	 $genders = Gender::orderBy('id', 'ASC')->get();
       /*  return User::create([
             'firstname' => $data['firstname'],
             'surname' => $data['surname'],
@@ -77,13 +77,13 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'dob' => $data['dob'],
-			      'gender_id' => $data['gender_id']
+		   'gender_id' => $data['gender_id']
         ]);*/
     }
 
     public function showRegistrationForm()
     {
-      $genders = gender::orderBy('title', 'ASC')->get();// выгпузка юзеров через create
+     $genders = gender::orderBy('title', 'ASC')->get();// выгпузка юзеров через create
      return view('auth.register')->withGenders($genders);
       // var_dump ($genders);
     }

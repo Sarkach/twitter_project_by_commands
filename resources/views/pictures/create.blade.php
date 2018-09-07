@@ -5,9 +5,9 @@
 
 {{-- В секции name родительского шаблона будет выведен перевод фразы: Create picture --}}
 @section('name', __('Create picture'))
-<center>
-  <h1>{{ __('Creating picture') }}</h1>
-</center>
+
+  <h1>{{ __('Creating picture:') }}</h1>
+
 
 {{-- В секции main родительского шаблона будет выведена форма --}}
 @section('main')
@@ -24,8 +24,9 @@
     <div class="form-group">
         {{-- Метка к полю ввода изображения --}}
         {{-- На метке будет выведен перевод слова Image --}}
-        {{ Form::label('path', __('picture')) }}
-
+		{{ Form::select('publication_id', $publications, ['class' => 'form-control']) }}<BR>
+        {{ Form::label('path', __('Picture')) }}
+    
         {{-- Поле ввода наименования роли --}}
         {{ Form::file('path', null,
           [

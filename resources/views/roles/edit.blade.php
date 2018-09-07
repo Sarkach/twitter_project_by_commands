@@ -9,7 +9,7 @@
 {{-- В секции main родительского шаблона будет выведена форма --}}
 @section('main')
 
-<h1>{{ __('Updating access rights') }}</h1>
+<h1>{{ __('Updating access rights:') }}</h1>
     {{-- Форма предъявляется методом HTTP PUT на веб­‑адрес: role/ID, где ID - первичный ключ товара --}}
     {{
         Form::model($role, [
